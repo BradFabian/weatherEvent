@@ -3,18 +3,36 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <title>weatherEvent</title>
+    <meta charset="UTF-8">
+    <title>weatherEvent</title>
 
-  <!-- Bootstrap CDN and custom CSS stylesheet-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Bootstrap CDN and custom CSS stylesheet-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-  <!-- Firebase Script -->
-  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <!-- Firebase Script -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
-  <!-- Moment -->
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Moment Script -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- Angolia Community Script -->
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.7.3"></script>
+
+    <script>
+    (function() {
+        var placesAutocomplete = places({
+            container: document.querySelector('#city'),
+            type: 'city',
+            aroundLatLngViaIP: false,
+            templates: {
+                value: function(suggestion) {
+                    return suggestion.name;
+                }
+            }
+        });
+    })();
+    </script>
 
 </head>
 
@@ -28,6 +46,9 @@
     <div class="jumbotron" id="header-jumbotron">
       <h1 class="text-center">weatherEvent</h1>
     </div>
+
+    <!-- City Search Input -->
+    <input type="search" id="city" class="form-control" placeholder="In which city do you live?" />
 
     <div class="row">
 
@@ -118,7 +139,7 @@
 
     <!-- jQuery and Javascript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/logic.js"></script>
+    <script type="text/javascript" src="javascript/logic.js"></script>
 
 
 </body>
