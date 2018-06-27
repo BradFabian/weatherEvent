@@ -25,54 +25,95 @@
     <br>
 
     <!-- Jumbotron Title -->
-    <div class="jumbotron">
+    <div class="jumbotron" id="header-jumbotron">
       <h1 class="text-center">weatherEvent</h1>
     </div>
 
-    <!-- Event Content -->
     <div class="row">
-        <div class="col-lg-8" id="event_listing">
+
+        <!-- Event Content -->
+        <div class="col-lg-8" id="event-content">
             <div class="card card-default">
                 <div class="card-heading">
-                    <strong><h6 class="card-title">Event Listing</h6></strong>
+                    <strong><h6 class="card-title">Event Content</h6></strong>
                 </div>
                 <div class="card-body">
+                    <!-- Table with event listings -->
                     <table class="table">
                         <thead>
                             <tr>
-                            <h3>Testing</h3>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
                             </tr>
                         </thead>
                         <tbody>
-                        <!-- Insert rows here -->
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
                         </tbody>
                     </table>
 
-                    <form role="form">
-                        <div class="form-group row">
-                            <label for="search-input"><strong>Search</strong></label>
-                            <input class="form-control" id="search-input" type="text">
-                            <input name="city" type="radio" value="city" /> City
-                            <input name="zipcode" type="radio" value="zipcode"/> Zip Code
+                    <!-- Row containing search div and radio button div -->
+                    <div class="row">
+
+                        <!-- Column containing div -->
+                        <div class="col-lg-8" id="search-div">
+                            <form role="form">
+                                <label for="search-input"><strong>Search</strong></label>
+                                <input class="form-control" id="search-input" type="text">
+                            </form>
                         </div>
-                        <button class="btn btn-default" id="add-train" type="submit"><strong>Submit</strong></button>
-                    </form>
+
+                        <!-- Column containing radio buttons -->
+                        <div class="col-lg-4" id="radio-div">
+                            <form role="form">
+                                <input name="city" type="radio" value="city" /> City
+                                <input name="zipcode" type="radio" value="zipcode"/> Zip Code
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Row containing submit button -->
+                    <div class="row">
+                        
+                        <!-- Submit button div -->
+                        <div class="col-lg-12 text-center" id="submit-div">
+                            <button class="btn btn-default" id="submit-button" type="submit"><strong>Submit</strong></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-<br><br>
 
-    <!-- Weather Content -->
-    <div class="row">
-        <div class="col-lg-3" id ="weather_content">
+        <!-- Weather Content -->
+        <div class="col-lg-4" id="weather-content">
             <div class="card card-default">
                 <div class="card-heading">
                     <strong><h6 class="card-title">Weather Content</h6></strong>
                 </div>
                 <div class="card-body">
+                    <!-- Insert weather content here-->
+                </div>
             </div>
         </div>
+
     </div>
 
     <!-- jQuery and Javascript -->
