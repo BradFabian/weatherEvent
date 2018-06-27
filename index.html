@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>weatherEvent</title>
+
+  <!-- Bootstrap CDN and custom CSS stylesheet-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Firebase Script -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+  <!-- Moment -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <br>
+
+    <!-- Jumbotron Title -->
+    <div class="jumbotron">
+      <h1 class="text-center">weatherEvent</h1>
+    </div>
+
+    <!-- Event Content -->
+    <div class="row">
+        <div class="col-lg-8" id="event_listing">
+            <div class="card card-default">
+                <div class="card-heading">
+                    <strong><h6 class="card-title">Event Listing</h6></strong>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <h3>Testing</h3>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <!-- Insert rows here -->
+                        </tbody>
+                    </table>
+
+                    <form role="form">
+                        <div class="form-group row">
+                            <label for="search-input"><strong>Search</strong></label>
+                            <input class="form-control" id="search-input" type="text">
+                            <input name="city" type="radio" value="city" /> City
+                            <input name="zipcode" type="radio" value="zipcode"/> Zip Code
+                        </div>
+                        <button class="btn btn-default" id="add-train" type="submit"><strong>Submit</strong></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<br><br>
+
+    <!-- Weather Content -->
+    <div class="row">
+        <div class="col-lg-3" id ="weather_content">
+            <div class="card card-default">
+                <div class="card-heading">
+                    <strong><h6 class="card-title">Weather Content</h6></strong>
+                </div>
+                <div class="card-body">
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Javascript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/logic.js"></script>
+
+
+</body>
+
+</html>
