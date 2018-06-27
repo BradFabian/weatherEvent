@@ -1,0 +1,7 @@
+#weather-content, #event-listing {
+float: left;
+}
+
+#submit-button {
+    margin: 0 auto;
+}
