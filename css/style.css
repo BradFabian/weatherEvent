@@ -37,3 +37,11 @@ h1 {
 #submit-div {
     margin-top: 10px;
 }
+
+h6 {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #7e7e7e;
+    padding: 10px;
+}
