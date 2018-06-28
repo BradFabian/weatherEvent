@@ -33,3 +33,7 @@ h1 {
     align-content: center;
     display: inline-block;
 }
+
+#submit-div {
+    margin-top: 10px;
+}
