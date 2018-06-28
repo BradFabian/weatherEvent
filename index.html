@@ -3,122 +3,134 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <title>weatherEvent</title>
+    <meta charset="UTF-8">
+    <title>weatherEvent</title>
 
-  <!-- Bootstrap CDN and custom CSS stylesheet-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Bootstrap CDN and custom CSS stylesheet-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
-  <!-- Firebase Script -->
-  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <!-- Firebase Script -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
-  <!-- Moment -->
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Moment -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 </head>
 
 <body>
 
-  <div class="container">
+    <div class="container">
 
-    <br>
+        <br>
 
-    <!-- Jumbotron Title -->
-    <div class="jumbotron" id="header-jumbotron">
-      <h1 class="text-center">weatherEvent</h1>
-    </div>
+        <!-- Jumbotron Title -->
+        <div class="jumbotron" id="header-jumbotron">
+            <h1 class="text-center">weatherEvent</h1>
+        </div>
 
-    <div class="row">
+        <div class="row">
 
-        <!-- Event Content -->
-        <div class="col-lg-8" id="event-content">
-            <div class="card card-default">
-                <div class="card-heading">
-                    <strong><h6 class="card-title">Event Content</h6></strong>
-                </div>
-                <div class="card-body">
-                    <!-- Table with event listings -->
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <!-- Row containing search div and radio button div -->
-                    <div class="row">
-
-                        <!-- Column containing div -->
-                        <div class="col-lg-8" id="search-div">
-                            <form role="form">
-                                <label for="search-input"><strong>Search</strong></label>
-                                <input class="form-control" id="search-input" type="text">
-                            </form>
-                        </div>
-
-                        <!-- Column containing radio buttons -->
-                        <div class="col-lg-4" id="radio-div">
-                            <form role="form">
-                                <input name="city" type="radio" value="city" /> City
-                                <input name="zipcode" type="radio" value="zipcode"/> Zip Code
-                            </form>
-                        </div>
+            <!-- Event Content -->
+            <div class="col-lg-8" id="event-content">
+                <div class="card card-default">
+                    <div class="card-heading">
+                        <strong>
+                            <h6 class="card-title">Event Content</h6>
+                        </strong>
                     </div>
+                    <div class="card-body">
+                        <!-- Table with event listings -->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    <!-- Row containing submit button -->
-                    <div class="row">
-                        
-                        <!-- Submit button div -->
-                        <div class="col-lg-12 text-center" id="submit-div">
-                            <button class="btn btn-default" id="submit-button" type="submit"><strong>Submit</strong></button>
+                        <!-- Row containing search div and radio button div -->
+                        <div class="row">
+
+                            <!-- Column containing div -->
+                            <div class="col-lg-8" id="search-div">
+                                <form role="form">
+                                    <label for="search-input">
+                                        <strong>Search</strong>
+                                    </label>
+                                    <input type="search" id="location" class="form-control" placeholder="In which city do you live?" />
+                                </form>
+                            </div>
+
+                            <!-- Column containing radio buttons -->
+                            <div class="col-lg-4" id="radio-div">
+                                <form role="form">
+                                    <input name="city" type="radio" value="city" /> City
+                                    <input name="zipcode" type="radio" value="zipcode" /> Zip Code
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Row containing submit button -->
+                        <div class="row">
+
+                            <!-- Submit button div -->
+                            <div class="col-lg-12 text-center" id="submit-div">
+                                <button class="btn btn-default" id="submit-button" type="submit">
+                                    <strong>Submit</strong>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Weather Content -->
-        <div class="col-lg-4" id="weather-content">
-            <div class="card card-default">
-                <div class="card-heading">
-                    <strong><h6 class="card-title">Weather Content</h6></strong>
-                </div>
-                <div class="card-body">
-                    <!-- Insert weather content here-->
+            <!-- Weather Content -->
+            <div class="col-lg-4" id="weather-content">
+                <div class="card card-default">
+                    <div class="card-heading">
+                        <strong>
+                            <h6 class="card-title">Weather Content</h6>
+                        </strong>
+                    </div>
+                    <div class="card-body">
+                        <!-- Insert weather content here-->
+                    </div>
                 </div>
             </div>
+
         </div>
 
-    </div>
+        <!-- script -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- jQuery and Javascript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/logic.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/places.js@1.7.3"></script>
+        <script type="text/javascript" src="./assets/javascript/logic.js"></script>
+        <script src="./assets/javascript/algolia.js"></script>
+
 
 
 </body>
