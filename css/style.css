@@ -1,7 +1,47 @@
+body {
+    background-image: url("../images/background.png");
+    background-repeat: repeat;
+}
+
 #weather-content, #event-listing {
-float: left;
+    float: left;
 }
 
 #submit-button {
     margin: 0 auto;
+}
+
+#header-jumbotron {
+    background-color:#eaf0f9;
+    text-align: center; 
+    padding: 15px;  
+}
+
+h1 {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: #7e7e7e;
+}
+
+#weather-logo {
+    width: 150px;
+
+}
+
+#header-title {
+    align-content: center;
+    display: inline-block;
+}
+
+#submit-div {
+    margin-top: 10px;
+}
+
+h6 {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #7e7e7e;
+    padding: 10px;
 }

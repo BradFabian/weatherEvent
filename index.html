@@ -3,18 +3,21 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <title>weatherEvent</title>
+    <meta charset="UTF-8">
+    <title>weatherEvent</title>
 
-  <!-- Bootstrap CDN and custom CSS stylesheet-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Bootstrap CDN and custom CSS stylesheet-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-  <!-- Firebase Script -->
-  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <!-- Firebase Script -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
-  <!-- Moment -->
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Moment Script -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- Google Fonts Script -->
+    <link href="https://fonts.googleapis.com/css?family=Palanquin" rel="stylesheet">
 
 </head>
 
@@ -26,7 +29,7 @@
 
     <!-- Jumbotron Title -->
     <div class="jumbotron" id="header-jumbotron">
-      <h1 class="text-center">weatherEvent</h1>
+        <span id="header-title"><img src="images/weather-logo.png" alt="weather logo" id="weather-logo"><h1>weatherEvent</h1></span>
     </div>
 
     <div class="row">
@@ -41,32 +44,9 @@
                     <!-- Table with event listings -->
                     <table class="table">
                         <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                            </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
+                            <!-- Insert rows of weather content here -->
                         </tbody>
                     </table>
 
@@ -74,18 +54,10 @@
                     <div class="row">
 
                         <!-- Column containing div -->
-                        <div class="col-lg-8" id="search-div">
+                        <div class="col-lg-12" id="search-div">
                             <form role="form">
                                 <label for="search-input"><strong>Search</strong></label>
-                                <input class="form-control" id="search-input" type="text">
-                            </form>
-                        </div>
-
-                        <!-- Column containing radio buttons -->
-                        <div class="col-lg-4" id="radio-div">
-                            <form role="form">
-                                <input name="city" type="radio" value="city" /> City
-                                <input name="zipcode" type="radio" value="zipcode"/> Zip Code
+                                <input type="search" id="search-input" class="form-control" placeholder="Which city do you want to search for events?" />
                             </form>
                         </div>
                     </div>
@@ -116,10 +88,14 @@
 
     </div>
 
-    <!-- jQuery and Javascript -->
+    <!-- jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/logic.js"></script>
 
+    <!-- Algolia -->
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.7.3"></script>
+
+    <!-- Logic -->
+    <script type="text/javascript" src="javascript/logic.js"></script>
 
 </body>
 
