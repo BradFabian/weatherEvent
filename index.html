@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CDN and custom CSS stylesheet-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- Firebase Script -->
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
@@ -29,7 +29,7 @@
 
     <!-- Jumbotron Title -->
     <div class="jumbotron" id="header-jumbotron">
-        <span id="header-title"><img src="images/weather-logo.png" alt="weather logo" id="weather-logo"><h1>weatherEvent</h1></span>
+        <span id="header-title"><img src="assets/images/weather-logo.png" alt="weather logo" id="weather-logo"><h1>weatherEvent</h1></span>
     </div>
 
     <div class="row">
@@ -42,11 +42,21 @@
                 </div>
                 <div class="card-body">
                     <!-- Table with event listings -->
-                    <table class="table">
+                    <table class="table" id="Event-Table">
                         <thead>
+                                <tr>
+                                        <th>Date</th>
+                                        <th>Title</th> 
+                                        <th>Venue Name</th>
+                                        <th>Address</th>
+                                      </tr>
                         </thead>
                         <tbody>
                             <!-- Insert rows of weather content here -->
+                            
+
+
+
                         </tbody>
                     </table>
 
@@ -95,7 +105,7 @@
     <script src="https://cdn.jsdelivr.net/npm/places.js@1.7.3"></script>
 
     <!-- Logic -->
-    <script type="text/javascript" src="javascript/logic.js"></script>
+    <script type="text/javascript" src="assets/javascript/logic.js"></script>
 
 </body>
 

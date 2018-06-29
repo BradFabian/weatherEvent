@@ -45,3 +45,8 @@ h6 {
     color: #7e7e7e;
     padding: 10px;
 }
+
+tbody {
+font-size: 14px;
+font-family: Georgia, 'Times New Roman', Times, serif
+}
