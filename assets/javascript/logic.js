@@ -20,6 +20,86 @@ console.log(response);
     console.log( "ready!" );
 });
 
+//API 5 Day forecast//
+$("#btn").on("click", function (event) {
+
+  event.preventDefault();
+
+  // Here we grab the text from the input box
+  var city = $("#cityInput").val().trim();
+
+  // Here we construct our URL
+  var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=ff67ab04503ce887f4d15b122c1904ed";
+
+  $.ajax({
+      url: queryURL,
+      method: "GET"
+  }).then(function (response) {
+      // Log the resulting object
+      console.log(response);
+      /*var iconcode = response.list.weather[i].icon;
+      var iconurl = 'http://openweathermap.org/img/w/' + iconcode + '.png';*/
+      var results = response.list
+      $('tbody').empty();
+
+      for (var i = 0; i < results.length; i++) {
+          if (i % 8 === 0) {
+              console.log(response.list[i])
+              var iconcode = response.list[i].weather[0].icon;
+              var iconurl = 'http://openweathermap.org/img/w/' + iconcode + '.png';
+              console.log(iconcode);
+
+              console.log("<img id='wicon' src=" + iconurl + " alt='Weather icon'>");
+              console.log("Rain:" + response.list[i].weather[0].description);
+
+              console.log("Wind Speed:" + response.list[i].wind.speed);
+              console.log("Humidity:" + response.list[i].main.humidity);
+              console.log("Temperature (F) " + response.list[i].main.temp);
+
+
+              var tbody = $("tbody");
+              // Create and save a reference to new empty table row
+              var tr = $("<tr>");
+              // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
+              var cityRow = '<td>' + response.Title + '</td>';
+              var iconRow = '<td> <img id="wicon" src=' + iconurl + " alt='Weather icon'></td>";
+              var rainRow = '<td>' + response.list[i].weather[0].description + '</td>';
+              var windRow = '<td>' + response.list[i].wind.speed + '</td>';
+              var humidityRow = '<td>' + response.list[i].main.humidity + '</td>';
+              var tempRow = '<td>' + response.list[i].main.temp + '</td>';
+              
+
+              // Append the td elements to the new table row
+              tr.append(iconRow);
+              tr.append(rainRow);
+              tr.append(windRow);
+              tr.append(humidityRow);
+              tr.append(tempRow);
+
+              // Append the table row to the tbody element
+              tbody.append(tr)
+          }
+
+
+
+
+
+      }
+
+      // console log
+      console.log(response.list)
+      console.log(response.list[0])
+      console.log(response.list[8])
+      console.log(response.list[16])
+      console.log(response.list[24])
+      console.log(response.list[32])
+
+
+      // Log the data in the console as well
+
+
+  });
+});
 //API Working Code//
 
 
