@@ -8,11 +8,13 @@ body {
 #header-jumbotron {
     background-color:#fafcfd;
     text-align: center; 
-    padding: 10px;  
+    padding: 10px;
     opacity: 0.75;
     border-style: dotted;
     border-width: 1px;
     border-color: #021949;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 /* H1 header in the jumbotron */
@@ -52,6 +54,8 @@ h6 {
     border-style: dotted;
     border-width: 1px;
     border-color: #021949;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 /* Submit button */
@@ -74,21 +78,26 @@ h6 {
     border-radius: 3px;
 }
 
-/* Add margin underneath first row */
-#row1 {
-    margin-bottom: 25px;
+#search-div, #event-content {
+    margin-right: 20px;
 }
 
 @media screen and (max-width: 990px) {
     #search-div {
         margin-bottom: 25px;
+        margin-right: -20px;
     }
     
     #event-content {
         margin-bottom: 25px;
+        margin-right: -20px;
     }
 
     #recent-searches-div {
+        margin-bottom: 30px;
+    }
+
+    #weather-content {
         margin-bottom: 30px;
     }
 }

@@ -26,91 +26,117 @@
 
 <body>
 
-  <div class="container">
+    <div class="container">
 
-    <br>
+        <br>
 
-    <!-- Jumbotron Title -->
-    <div class="jumbotron" id="header-jumbotron">
-        <span id="header-title"><img src="assets/images/weather-logo.png" alt="weather logo" id="weather-logo"><h1>weatherEvent</h1></span>
-    </div>
-
-    <!-- 1st Row -->
-    <div class="row" id="row1">
-
-        <!-- Column 1 of 2 containing search bar -->
-        <div class="col-lg-8" id="search-div">
-            <div class="card card-default">
-                <div class="card-heading">
-                    <h6 class="card-title">Search</h6>
-                </div>
-                <div class="card-body text-center">
-                    <form role="form">
-                        <input type="search" id="search-input" class="form-control" placeholder="Which city do you want to search for events?" />
-                    </form>
-                    <button type="button" class="btn-outline-primary" id="submit-button">SUBMIT</button>
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Jumbotron Title -->
+                <div class="jumbotron" id="header-jumbotron">
+                    <span id="header-title">
+                        <img src="assets/images/weather-logo.png" alt="weather logo" id="weather-logo">
+                        <h1>weatherEvent</h1>
+                    </span>
                 </div>
             </div>
         </div>
 
-        <!-- Column 2 of 2 containing weather content -->
-        <div class="col-lg-4" id="weather-content">
-            <div class="card card-default">
-                <div class="card-heading">
-                    <h6 class="card-title">Weather Content</h6>
+            <!-- 1st Row -->
+            <div class="row" id="row1">
+
+                <!-- Column 1 of 2 -->
+                <div class="col-lg-7">
+
+                    <!-- Row 1 of 2 within 1st column containing search div -->
+                    <div class="row" id="search-div">
+                        <div class="card card-default">
+                            <div class="card-heading">
+                                <h6 class="card-title">Search</h6>
+                            </div>
+                            <div class="card-body text-center">
+                                <form role="form">
+                                    <input type="search" id="search-input" class="form-control" placeholder="Which city do you want to search for events?" />
+                                </form>
+                                <button type="button" class="btn-outline-primary" id="submit-button">SUBMIT</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 of 2 within 1st column containing event content  -->
+                    <div class="row" id="event-content">
+                        <div class="card card-default">
+                            <div class="card-heading">
+                                <h6 class="card-title">Event Content</h6>
+                            </div>
+                            <div class="card-body">
+
+                                <!-- Table with event listings -->
+                                <table class="table" id="Event-Table">
+                                    <thead>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Insert rows of event content here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <!-- Insert weather content here -->
+
+                <!-- Column 2 of 2 -->
+                <div class="col-lg-5">
+                    <!-- Row 1 of 2 within 2nd column containing weather div -->
+                    <div class="row" id="weather-content">
+                        <div class="card card-default">
+                            <div class="card-heading">
+                                <strong>
+                                    <h6 class="card-title">Weather Content</h6>
+                                </strong>
+                            </div>
+                            <div class="table-responsive">
+                                <!-- Table with event listings -->
+                                <table class="table" id="Weather-Table">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Rain</th>
+                                            <th>Wind</th>
+                                            <th>Humidity</th>
+                                            <th>Temp</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Insert rows of events content here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 of 2 within 2nd column containing recent searches -->
+                    <div class="row" id="recent-searches-div">
+                        <div class="card card-default">
+                            <div class="card-heading">
+                                <h6 class="card-title">Recent Searches</h6>
+                            </div>
+                            <div class="card-body" id="recent-searches">
+                                <!-- Insert recent searches here -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- 2nd Row -->
-    <div class="row" id="row2">
 
-        <!-- Column 1 of 2 containing event content  -->
-        <div class="col-lg-8" id="event-content">
-            <div class="card card-default">
-                <div class="card-heading">
-                    <h6 class="card-title">Event Content</h6>
-                </div>
-                <div class="card-body">
+            <!-- jQuery -->
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-                    <!-- Table with event listings -->
-                    <table class="table" id="Event-Table">
-                        <thead>
-                        </thead>
-                        <tbody>
-                            <!-- Insert rows of event content here -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+            <!-- Algolia -->
+            <script src="https://cdn.jsdelivr.net/npm/places.js@1.7.3"></script>
 
-        <!-- Column 2 of 2 containing recent searches -->
-        <div class="col-lg-4" id="recent-searches-div">
-            <div class="card card-default">
-                <div class="card-heading">
-                    <h6 class="card-title">Recent Searches</h6>
-                </div>
-                <div class="card-body" id="recent-searches">
-                    <!-- Insert recent searches here -->
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- jQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Algolia -->
-    <script src="https://cdn.jsdelivr.net/npm/places.js@1.7.3"></script>
-
-    <!-- Logic -->
-    <script type="text/javascript" src="assets/javascript/logic.js"></script>
+            <!-- Logic -->
+            <script type="text/javascript" src="assets/javascript/logic.js"></script>
 
 </body>
 
