@@ -9,47 +9,121 @@ $(document).ready(function () {
     templates: {
       value: function (suggestion) {
         return suggestion.name;
+        console.log("work")
       }
     }
   });
 
   // Initialize Firebase
-var config = {
-  apiKey: "AIzaSyAPiXUM5pySi3Eg0I3rkpNjN_O53VLi2Jw",
-  authDomain: "weatherevent-d8ee7.firebaseapp.com",
-  databaseURL: "https://weatherevent-d8ee7.firebaseio.com",
-  projectId: "weatherevent-d8ee7",
-  storageBucket: "weatherevent-d8ee7.appspot.com",
-  messagingSenderId: "444172683620"
-};
-firebase.initializeApp(config);
+  var config = {
+    apiKey: "AIzaSyAPiXUM5pySi3Eg0I3rkpNjN_O53VLi2Jw",
+    authDomain: "weatherevent-d8ee7.firebaseapp.com",
+    databaseURL: "https://weatherevent-d8ee7.firebaseio.com",
+    projectId: "weatherevent-d8ee7",
+    storageBucket: "weatherevent-d8ee7.appspot.com",
+    messagingSenderId: "444172683620"
+  };
+  firebase.initializeApp(config);
 
-var database = firebase.database();
+  var database = firebase.database();
+  var searches = "";
+  var timeSince = "";
+  console.log("hello");
 
-database.ref().on("value",function(snapshot){
-  var recentSearches = snapshot.val().events;
-  console.log("is it working")
-
-  $("#recentSearches> Tbody").append("<tr>"+ recentSearches+ "</tr>");
-
-});
-
-  $("#search-input").on("click", function(event){
+  $("#submit-button").on("click", function(event){
     event.preventDefault();
-    var recentSearches = $("#search-input").val().trim();
+    console.log("hello");
 
-    var newSearch = {
-      events:searched
-    }
+    events = $("#search-input").val().trim();
 
-    database.ref().push(newSearch)
+    
+
+  
+    
+    // function timeSince(date) {
+
+    //   var seconds = Math.floor((new Date() - date) / 1000);
+    
+    //   var interval = Math.floor(seconds / 31536000);
+    
+    //   if (interval > 1) {
+    //     return interval + " years";
+    //   }
+    //   interval = Math.floor(seconds / 2592000);
+    //   if (interval > 1) {
+    //     return interval + " months";
+    //   }
+    //   interval = Math.floor(seconds / 86400);
+    //   if (interval > 1) {
+    //     return interval + " days";
+    //   }
+    //   interval = Math.floor(seconds / 3600);
+    //   if (interval > 1) {
+    //     return interval + " hours";
+    //   }
+    //   interval = Math.floor(seconds / 60);
+    //   if (interval > 1) {
+    //     return interval + " minutes";
+    //   }
+    //   return Math.floor(seconds) + " seconds";
+    // };
+
+    database.ref().push({
+      searches:events
+    })
 
     $("#search-input").val("");
+  });
 
-  })
+  database.ref().limitToLast(5).on("child_added",function(snapshot){
+
+    
+    var updatedSearches = $("#recent-searches").prepend("<div> Events in "+snapshot.val().searches+"</div>");
+    
+
+  }, function(errorObject){
+    console.log("Errors handled: " + errorObject.code)
+  });
+
+  // $("#submit-button").on("click", function (event) {
+  //   event.preventDefault();
+  //   console.log("hello")
+
+  //   var searched = $("#search-input").val().trim();
 
 
-  var city = "Miami";
+    
+
+  //   var newSearch = {
+  //     events: searched,
+  //     time: since
+  //   }
+
+  //   database.ref().push(newSearch);
+
+    
+
+  // })
+
+  // database.ref().on("child_added", function (childSnapshot, prevChildkey) {
+  //   var recentSearches = childSnapshot.val().events;
+    
+
+   
+  
+  
+  //   console.log("it's working")
+
+  //   $("#recent-searches").append("<div>" + newSearch + " ago.</div>");
+
+
+  // });
+
+  // $("#search-input").val("");
+
+  
+
+  // var city = "Miami";
 
   // Here we construct our URL
   var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=ff67ab04503ce887f4d15b122c1904ed";

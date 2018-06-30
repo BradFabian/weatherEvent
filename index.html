@@ -81,7 +81,7 @@
                                     <label for="search-input">
                                         <strong>Search</strong>
                                     </label>
-                                    <input type="search" id="location" class="form-control" placeholder="In which city do you live?" />
+                                    <input type="search" id="search-input" class="form-control" placeholder="In which city do you live?" />
                                 </form>
                             </div>
 
@@ -121,15 +121,34 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-4">
+                <div class="card card-default">
+                    <div class="card-heading">
+                        <strong>
+                            <h6 class="card-title">Recent Searches</h6>
+                        </strong>
+                    </div>
+                    <div class="card-body" id="recent-box">
+                        <div id="recent-searches"></div>
+                        <div id="recent-searches"></div>
+                        <div id="recent-searches"></div>
+                        <div id="recent-searches"></div>
+                        <div id="recent-searches"></div>
+                        <!-- Insert searches here-->
+                    </div>
+                </div>
+            </div>
 
         </div>
+
+
 
         <!-- script -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/places.js@1.7.3"></script>
         <script type="text/javascript" src="./assets/javascript/logic.js"></script>
-        <script src="./assets/javascript/algolia.js"></script>
+
 
 
 
