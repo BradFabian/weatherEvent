@@ -1,22 +1,21 @@
+/* Repeat background image for body */
 body {
     background-image: url("../images/background.jpg");
     background-repeat: repeat;
 }
 
-#weather-content, #event-listing {
-    float: left;
-}
-
+/* Jumbotron header */
 #header-jumbotron {
-    background-color:#eaf0f9;
+    background-color:#fafcfd;
     text-align: center; 
     padding: 10px;  
-    opacity: 0.80;
+    opacity: 0.75;
     border-style: dotted;
     border-width: 1px;
     border-color: #021949;
 }
 
+/* H1 header in the jumbotron */
 h1 {
     font-family: 'Palanquin', sans-serif;
     font-weight: bold;
@@ -26,50 +25,69 @@ h1 {
     padding-top: 40px;
 }
 
+/* Change width of weather logo image */
 #weather-logo {
     width: 120px;
-
 }
 
+/* Span containing header title and header image */
 #header-title {
     align-content: center;
     display: inline-block;
 }
 
+/* font size for header within content boxes */
 h6 {
     font-family: 'Palanquin', sans-serif;
-    font-weight: 800;
-    font-size: 24px;
+    font-weight: 900;
+    font-size: 22px;
     color: #585d5e;
     padding: 10px;
 }
 
+/* Style for all cards */
 .card {
-    background-color: #eaf0f9;
-    opacity: 0.80;
+    background-color: #fafcfd;
+    opacity: 0.75;
     border-style: dotted;
     border-width: 1px;
     border-color: #021949;
 }
 
+/* Submit button */
 #submit-button {
-    font-family: 'Cookie', cursive;
+    font-family: 'Rubik', sans-serif;
     background-color: #3d96d7;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: normal;
-    padding: 0px 15px;
+    padding: 5px 15px;
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #ffffff;
     border-radius: 3px;
 }
 
+/* Style when hovering over the submit button */
 #submit-button:hover {
     background-color: #ffcd00;
     color: #021949;
     border-radius: 3px;
 }
 
+/* Add margin underneath first row */
 #row1 {
     margin-bottom: 25px;
+}
+
+@media screen and (max-width: 9990px) {
+    #search-div {
+        margin-bottom: 25px;
+    }
+    #event-content {
+        margin-bottom: 25px;
+    }
+
+    #recent-searches {
+        margin-bottom: 30px;
+    }
 }
