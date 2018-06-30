@@ -79,7 +79,7 @@ h6 {
     margin-bottom: 25px;
 }
 
-@media screen and (max-width: 9990px) {
+@media screen and (max-width: 990px) {
     #search-div {
         margin-bottom: 25px;
     }
