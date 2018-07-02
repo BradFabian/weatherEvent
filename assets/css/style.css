@@ -6,15 +6,15 @@ body {
 
 /* Jumbotron header */
 #header-jumbotron {
-    background-color:#fafcfd;
+    background-color:#cae7f4;
     text-align: center; 
     padding: 10px;
-    opacity: 0.75;
+    opacity: 1;
     border-style: dotted;
     border-width: 1px;
     border-color: #021949;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: -20px;
+    margin-left: -20px;
 }
 
 /* H1 header in the jumbotron */
@@ -49,8 +49,8 @@ h6 {
 
 /* Style for all cards */
 .card {
-    background-color: #fafcfd;
-    opacity: 0.75;
+    background-color: #cae7f4;
+    opacity: 1;
     border-style: dotted;
     border-width: 1px;
     border-color: #021949;
@@ -78,10 +78,35 @@ h6 {
     border-radius: 3px;
 }
 
+/* Add margin to the right of search div box and event content box */
 #search-div, #event-content {
     margin-right: 20px;
 }
 
+/* Changed border within table */
+.table td {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #a9a9a9;
+}
+
+/* Changed border of table header */
+.table thead th {
+    border-bottom: 1px solid #a9a9a9;
+    border-top: none;
+}
+
+/* Changed background color of the table header */
+.card-heading {
+    background-color: #d3d3d3;
+}
+
+/* Changed font color of the table header */
+.card-title {
+    color: #021949;
+}
+
+/* Media queries for 990px and below */
 @media screen and (max-width: 990px) {
     #search-div {
         margin-bottom: 25px;
