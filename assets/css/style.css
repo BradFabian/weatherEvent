@@ -1,6 +1,6 @@
-/* Repeat background image for body */
-body {
-    background-image: url("../images/background.jpg");
+/* Repeat background image for main-background */
+.main-background {
+    background-image: url("../images/backgroundTransparent.png");
     background-repeat: repeat;
 }
 
@@ -104,6 +104,15 @@ h6 {
 /* Changed font color of the table header */
 .card-title {
     color: #ffffff;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
 }
 
 /* Media queries for 990px and below */
