@@ -10,9 +10,9 @@ body {
     text-align: center; 
     padding: 10px;
     opacity: 1;
-    border-style: dotted;
-    border-width: 1px;
-    border-color: #021949;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #006497;
     margin-right: -20px;
     margin-left: -20px;
 }
@@ -98,12 +98,12 @@ h6 {
 
 /* Changed background color of the table header */
 .card-heading {
-    background-color: #d3d3d3;
+    background-color: #006497;
 }
 
 /* Changed font color of the table header */
 .card-title {
-    color: #021949;
+    color: #ffffff;
 }
 
 /* Media queries for 990px and below */
