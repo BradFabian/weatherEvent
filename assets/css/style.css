@@ -51,11 +51,11 @@ h6 {
 .card {
     background-color: #cae7f4;
     opacity: 1;
-    border-style: dotted;
-    border-width: 1px;
-    border-color: #021949;
     width: 100%;
     margin-bottom: 10px;
+    border-style: solid;
+    border-color: #006497;
+    border-width: 1px;
 }
 
 /* Submit button */
@@ -99,6 +99,7 @@ h6 {
 /* Changed background color of the table header */
 .card-heading {
     background-color: #006497;
+    border-style: none;
 }
 
 /* Changed font color of the table header */
