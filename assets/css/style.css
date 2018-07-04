@@ -1,0 +1,138 @@
+/* Repeat background image for main-background */
+.main-background {
+    background-image: url("../images/backgroundTransparent.png");
+    background-repeat: repeat;
+}
+
+/* Jumbotron header */
+#header-jumbotron {
+    background-color:#cae7f4;
+    text-align: center; 
+    padding: 10px;
+    opacity: 1;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #006497;
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
+/* H1 header in the jumbotron */
+h1 {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #585d5e;
+    float: right;
+    padding-top: 40px;
+}
+
+/* Change width of weather logo image */
+#weather-logo {
+    width: 120px;
+}
+
+/* Span containing header title and header image */
+#header-title {
+    align-content: center;
+    display: inline-block;
+}
+
+/* font size for header within content boxes */
+h6 {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: #585d5e;
+    padding: 10px;
+}
+
+/* Style for all cards */
+.card {
+    background-color: #cae7f4;
+    opacity: 1;
+    width: 100%;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-color: #006497;
+    border-width: 1px;
+}
+
+/* Submit button */
+#submit-button {
+    font-family: 'Rubik', sans-serif;
+    background-color: #3d96d7;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 5px 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+/* Style when hovering over the submit button */
+#submit-button:hover {
+    background-color: #ffcd00;
+    color: #021949;
+    border-radius: 3px;
+}
+
+/* Add margin to the right of search div box and event content box */
+#search-div, #event-content {
+    margin-right: 20px;
+}
+
+/* Changed border within table */
+.table td {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #a9a9a9;
+}
+
+/* Changed border of table header */
+.table thead th {
+    border-bottom: 1px solid #a9a9a9;
+    border-top: none;
+}
+
+/* Changed background color of the table header */
+.card-heading {
+    background-color: #006497;
+    border-style: none;
+}
+
+/* Changed font color of the table header */
+.card-title {
+    color: #ffffff;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+/* Media queries for 990px and below */
+@media screen and (max-width: 990px) {
+    #search-div {
+        margin-bottom: 25px;
+        margin-right: -20px;
+    }
+    
+    #event-content {
+        margin-bottom: 25px;
+        margin-right: -20px;
+    }
+
+    #recent-searches-div {
+        margin-bottom: 30px;
+    }
+
+    #weather-content {
+        margin-bottom: 30px;
+    }
+}
