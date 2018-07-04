@@ -1,9 +1,3 @@
-/* Repeat background image for main-background */
-.main-background {
-    background-image: url("../images/backgroundTransparent.png");
-    background-repeat: repeat;
-}
-
 /* Jumbotron header */
 #header-jumbotron {
     background-color:#cae7f4;
