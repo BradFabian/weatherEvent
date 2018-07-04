@@ -219,7 +219,7 @@ $("#submit-button").click(function () {
 
     //Add search to recent searches databases and update recent searches box
     events = $("#search-input").val().trim();
-    var stamp = moment().format("x");
+    var stamp = moment().format("X");
 
     database.ref().push({
         searches: events,
