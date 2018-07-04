@@ -12,6 +12,7 @@
 
     var database = firebase.database();
     var searches = "";
+    var time = "";
 
 
 // A $( document ).ready() block.
@@ -218,15 +219,18 @@ $("#submit-button").click(function () {
 
     //Add search to recent searches databases and update recent searches box
     events = $("#search-input").val().trim();
+    var stamp = moment().format("x");
 
     database.ref().push({
-        searches: events
+        searches: events,
+        time: stamp
+        
     })
     $("#search-input").val("");
 });
 database.ref().limitToLast(10).on("child_added", function (snapshot) {
 
-    $("#recent-searches").prepend("<div> Events in " + snapshot.val().searches + "</div>");
+    $("#recent-searches").prepend("<div> Events in " + snapshot.val().searches + " " + moment.unix(snapshot.val().time).startOf("minute").fromNow() + "</div>");
 
 
 }, function (errorObject) {
