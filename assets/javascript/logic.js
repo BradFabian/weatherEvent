@@ -16,9 +16,6 @@
 
 // A $( document ).ready() block.
 $(document).ready(function () {
-
-
-
     //Algolia API
     // Algolia input box
     var placesAutocomplete = places({
@@ -117,41 +114,14 @@ $(document).ready(function () {
                     "<tr><td>"
                     + iconRow + "</td><td>" + rainRow + "</td><td>" + windRow + "</td><td>" + humidityRow + "</td><td>" + tempRow + "</td><td>" +
                     "</td></tr>");
-
-
-                // // Append the td elements to the new table row
-                // tr.append(iconRow);
-                // tr.append(rainRow);
-                // tr.append(windRow);
-                // tr.append(humidityRow);
-                // tr.append(tempRow);
-
-                // Append the table row to the tbody element
-                //tbody.append(tr)
-
-                //$("#Weather-Table > tbody").append(tr);
-
             }
 
         }
 
     });
-
-
-
-
-
-
 });
 
 $("#submit-button").click(function () {
-
-
-   
-
-
-
-    alert("Handler for .click() called.");
 
     var city = $("#search-input").val().trim();
 
@@ -240,20 +210,6 @@ $("#submit-button").click(function () {
                     "<tr><td>"
                     + iconRow + "</td><td>" + rainRow + "</td><td>" + windRow + "</td><td>" + humidityRow + "</td><td>" + tempRow + "</td><td>" +
                     "</td></tr>");
-
-
-                // // Append the td elements to the new table row
-                // tr.append(iconRow);
-                // tr.append(rainRow);
-                // tr.append(windRow);
-                // tr.append(humidityRow);
-                // tr.append(tempRow);
-
-                // Append the table row to the tbody element
-                //tbody.append(tr)
-
-                //$("#Weather-Table > tbody").append(tr);
-
             }
 
         }
@@ -261,9 +217,6 @@ $("#submit-button").click(function () {
     });
 
     //Add search to recent searches databases and update recent searches box
-
-    
-
     events = $("#search-input").val().trim();
 
     database.ref().push({
